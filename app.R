@@ -1,5 +1,8 @@
 library(shiny)
 library(ggplot2)
+if(!"GGally" %in% installed.packages()) install.packages('GGally')
+library(GGally)
+library(MASS)
 
 fb <- read.csv('data/dataset_Facebook.csv',sep = ';')
 fb <- fb[fb$Total.Interactions!=6334,]
